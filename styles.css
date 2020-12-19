@@ -25,12 +25,15 @@ body{
     top: -40px;
     left: 40px;
 }
-
 h2{
-    /* margin-left: 4%; */
-    margin-top: 1%; 
-    font-size: 40px;
-    text-align: center;
+    margin-left: 4%;
+    color: rgb(146 200 62);
+    margin-top: .7%; 
+    font-size: 32.5px;
+    width: 80%;
+    padding-bottom: 9px;
+    border-bottom: 1.5px solid black;
+    /* text-align: center; */
 }
 
 .map-cont{
@@ -38,7 +41,7 @@ h2{
     height: 80%;
     position: absolute;
     top: 15%;
-    border-right: 1px solid black;
+    border-right: 2px solid rgb(146 200 62);
 }
 
 #map{
