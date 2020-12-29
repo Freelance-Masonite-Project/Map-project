@@ -57,17 +57,18 @@ h2{
     top: 13%; left: 4%;
 }
 
-.filter{
-   width: 400px;
-   height: 400px;
+/* filter and detail divs */
+.filter-cont, .details-cont{
+    position:absolute;
+    right: 0;
+    height: 40%;
+    width: 40%;
 }
 
-.filter-title{
-    border-bottom: 1.5px solid black;
-    margin-left: 63%;
-    color: rgb(146 200 62);
-    margin-top: 3.3%; 
-    font-size: 32.5px;
-    width: 30%;
-    padding-bottom: 9px;
- }
+.filter-cont{
+    top: 15%;
+}
+
+.details-cont{
+    top: 55%;
+}
