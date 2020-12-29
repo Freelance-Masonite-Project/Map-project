@@ -65,8 +65,12 @@ h2{
     width: 40%;
 }
 
+.filter-title, .detail-title{
+    font-size: 28px;
+}
+
 .filter-cont{
-    top: 15%;
+    top: 16%;
 }
 
 .details-cont{
@@ -85,6 +89,8 @@ h2{
 .btn-ttl{
     text-align: center;
     margin: 5px;
+    font-size: 24px;
+    color: rgb(96, 124, 50);
 }
 
 .btn-cont{
