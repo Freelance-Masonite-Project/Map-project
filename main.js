@@ -706,23 +706,6 @@ $(document).ready(()=>{
       {
          "Country": "USA",
          "Name": "Marshfield",
-         "Notes": "ARCH",
-         "Street": "1401 E. 4th St.",
-         "City": "Marshfield",
-         "State": "WI",
-         "Zip": "54449",
-         "Telephone #": "800-869-3667",
-         "Plant Manager": "Bruce Price",
-         "Division Leader": "Marc Kincade",
-         "Plant Safety Coord": {
-            "Mgr": "Bruce Price"
-         },
-         "lat": 44.659992,
-         "lng": -90.157646
-      },
-      {
-         "Country": "USA",
-         "Name": "Marshfield",
          "Notes": "COMP, ARCH",
          "Street": "1401 E. 4th St.",
          "City": "Marshfield",
@@ -1246,6 +1229,72 @@ $(document).ready(()=>{
          }
       }
    ];
+
+
+   function isEqual(target, check){
+      for(var i=0; i<check.length; i++)
+      {
+         for(var j=0; j<target.length; j++)
+         {
+            if(target[j] == check[i]){return true;}
+         }
+      }
+      return false;
+   }
+
+   function clearMap(){
+      for(var i=0; i<active_markers.length; i++)
+      {
+         map.removeLayer(active_markers[i]);
+      }
+   }
+
+   function placeAllMarkers(){
+      //creates marks for USA locations with popups
+      for(var i =0; i<locations.length; i++){
+         if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada' ){
+              var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+              var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
+                     .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
+              active_markers.push(marker);
+         }else{
+             //console.log(locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country']);
+         }
+     }
+   }
+
+   function searchLocations(){
+      //finds all current active cats
+      var target_cats = [];
+      var active = $('.active');
+      for(var i =0; i<active.length; i++)
+      {
+         target_cats.push(active[i].id);
+      }
+      
+      clearMap(); //clears map
+
+      //iterates through location json and puts new markers
+      if(target_cats.length == 0){
+         placeAllMarkers();
+      }else{
+         for(var i = 0; i<locations.length; i++)
+         {
+            var loc_cats = locations[i].Notes.split(', ');
+            loc_cats.sort();
+            target_cats.sort();
+            if(isEqual(target_cats, loc_cats)){
+               if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada' ){
+                  var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+                  var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
+                        .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
+                  active_markers.push(marker);
+               }
+            }
+         }
+      }
+   }
+
    //Initiates map
    var map = L.map('map', {
        center: [38.7139, -97.4146],
@@ -1257,22 +1306,16 @@ $(document).ready(()=>{
        // doubleClickZoom: false,
        // zoomSnap: .1
    });
+
+   const active_markers = [];
+   
+   placeAllMarkers();
    
    //Sets tile layer
    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
        }).addTo(map);
-   
-   //creates marks for USA locations with popups
-   for(var i =0; i<locations.length; i++){
-       if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada' ){
-           var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
-           L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
-                   .bindPopup(`Location: ${locations[i].City}<br>Plant Manager: ${locations[i]['Plant Manager']}<br>Division Leader: ${locations[i]['Division Leader']}<br>Address: <a>${address}</a>`);
-       }else{
-           console.log(locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country']);
-       }
-   }
+
    
    //catagory btn select
    $('.cat-btn').on('click', function(){
@@ -1281,6 +1324,7 @@ $(document).ready(()=>{
       }else{
          $(this).addClass('active');
       }
+      searchLocations();
    });
 
 });

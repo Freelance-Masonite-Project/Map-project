@@ -107,23 +107,23 @@ h2{
     border: 1px solid black;
     border-radius: 5px;
     padding: 0;
-    margin: 5px;
+    margin: 7.5px;
     width: 75px;
     height: 30px;
-    transition: width .5s, height .5s;
+    transition: width .5s, height .5s, background .25s;
     font-size: 10px;
 }
 
 .cat-btn:hover{
     background: rgb(215, 242, 172);
-    height: 25px;
-    width: 70px;
+    /* height: 25px;
+    width: 70px; */
 }
 
 .cat-btn.active{
     background: rgb(174, 223, 95);
-    height: 37.5px;
-    width: 82.5px;
+    /* height: 37.5px;
+    width: 82.5px; */
 }
 
 .cat-btn:focus {outline:0;}
