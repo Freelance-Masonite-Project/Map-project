@@ -11,6 +11,8 @@ body{
     margin: 0;
 }
 
+/*Navbar */
+
 .navbar{
     margin: 0;
     background: linear-gradient(180deg, rgba(172, 172, 172), rgb(172, 172, 172, 0.178));
@@ -25,6 +27,8 @@ body{
     top: -40px;
     left: 40px;
 }
+
+/* cont titles */
 h2{
     margin-left: 4%;
     color: rgb(146 200 62);
@@ -36,6 +40,7 @@ h2{
     /* text-align: center; */
 }
 
+/* map div */
 .map-cont{
     width: 60%;
     height: 80%;
@@ -51,3 +56,18 @@ h2{
     position: absolute;
     top: 13%; left: 4%;
 }
+
+.filter{
+   width: 400px;
+   height: 400px;
+}
+
+.filter-title{
+    border-bottom: 1.5px solid black;
+    margin-left: 63%;
+    color: rgb(146 200 62);
+    margin-top: 3.3%; 
+    font-size: 32.5px;
+    width: 30%;
+    padding-bottom: 9px;
+ }
