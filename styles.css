@@ -72,3 +72,51 @@ h2{
 .details-cont{
     top: 55%;
 }
+
+/* filter styling*/
+.filter-inputs{
+    display: block;
+    margin: auto;
+    background: rgb(237, 237, 237);
+    width: 80%;
+    height: 60%;
+    padding: 5px;
+}
+.btn-ttl{
+    text-align: center;
+    margin: 5px;
+}
+
+.btn-cont{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* filter buttons styling */
+.cat-btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0;
+    margin: 8px;
+    width: 75px;
+    height: 30px;
+    transition: width .5s, height .5s;
+}
+
+.cat-btn:hover{
+    background: rgb(215, 242, 172);
+    height: 25px;
+    width: 70px;
+}
+
+.cat-btn.active{
+    background: rgb(174, 223, 95);
+    height: 37.5px;
+    width: 82.5px;
+}
+
+.cat-btn:focus {outline:0;}
