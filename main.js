@@ -1232,14 +1232,16 @@ $(document).ready(()=>{
 
 
    function isEqual(target, check){
+      var counter = 0;
       for(var i=0; i<check.length; i++)
       {
          for(var j=0; j<target.length; j++)
          {
-            if(target[j] == check[i]){return true;}
+            if(check[i] == target[j]){counter++;}
          }
       }
-      return false;
+      if(counter == target.length){return true;}
+      else{return false;}
    }
 
    function clearMap(){
