@@ -1251,6 +1251,8 @@ $(document).ready(()=>{
          var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
          if(address == target_address){
             console.log(locations[i]);
+            $('#address').html(address);
+            $('#Catagories').html(locations[i]["Notes"].toString());
          }
       }
    }
@@ -1318,6 +1320,7 @@ $(document).ready(()=>{
                   var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
                         .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
                   active_markers.push(marker);
+                  marker.on('click', displayMarkerData);
                }
             }
          }
