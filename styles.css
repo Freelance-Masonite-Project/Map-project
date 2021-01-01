@@ -123,3 +123,28 @@ h2{
 }
 
 .cat-btn:focus {outline:0;}
+
+/* Location details */
+.data-cont{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-input{
+    display: block;
+    margin: auto;
+    background: rgb(237, 237, 237);
+    width: 80%;
+    height: 60%;
+    padding: 5px;
+}
+.data{
+    text-align: center;
+    margin: 5px;
+    font-size: 24px;
+    color: rgb(96, 124, 50);
+}
