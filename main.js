@@ -1231,6 +1231,31 @@ $(document).ready(()=>{
    ];
 
 
+   //gets data from clicked marker
+   function displayMarkerData(data){
+      var raw = data.target._popup._content.split('');
+      //loop that gets address form marker
+      var ison = false;
+      var target_address = "";
+      for(var i=0; i<raw.length; i++)
+      {
+         if(ison){
+            target_address = target_address + raw[i];
+         }
+         if(raw[i] == ">" && raw[i-1] == "a"){ison = true;}
+         if((raw.length-i)==5){ison=false;}
+      }
+
+      //searches through json to find correct location
+      for(var i = 0; i<locations.length; i++){
+         var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+         if(address == target_address){
+            console.log(locations[i]);
+         }
+      }
+   }
+
+   //checks wether a location has target catagories
    function isEqual(target, check){
       var counter = 0;
       for(var i=0; i<check.length; i++)
@@ -1244,6 +1269,7 @@ $(document).ready(()=>{
       else{return false;}
    }
 
+   //clears map
    function clearMap(){
       for(var i=0; i<active_markers.length; i++)
       {
@@ -1259,6 +1285,7 @@ $(document).ready(()=>{
               var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
                      .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
               active_markers.push(marker);
+              marker.on('click', displayMarkerData);
          }else{
              //console.log(locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country']);
          }
