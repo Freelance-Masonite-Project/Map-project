@@ -131,11 +131,7 @@ h2{
 /* Location details */
 .data-cont{
     margin: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    height: 75%;
 }
 
 .location-input{
@@ -155,9 +151,8 @@ h2{
 
 .data{
     width: 100%;
-    height: 40px;
+    height: 30%;
     margin: 0;
-    padding-bottom: 5px;
     border-bottom: 1px solid black;
     display:block;
 }
@@ -169,7 +164,9 @@ h4{
     line-height: 40px;
 }
 
-span{
+.data-holder{
+    display:block;
+    height: 100%;
     font-size: 13px;
     line-height: 40px;
     text-align: right;
