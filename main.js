@@ -1409,14 +1409,10 @@ $(document).ready(()=>{
 
    //Initiates map
    var map = L.map('map', {
-       center: [38.7139, -97.4146],
-       zoom: 4,
-       // maxZoom: 4.6,
-       minZoom: 3,
-       // zoomControl: false,
-       // dragging: false,
-       // doubleClickZoom: false,
-       // zoomSnap: .1
+       center: [38.7139, 0.4146],
+       zoom: 1.6,
+       minZoom: 1.6,
+       zoomSnap: .1
    });
 
    const active_markers = [];
