@@ -234,7 +234,9 @@ $(document).ready(()=>{
          "Division Leader": "Benoit Martine",
          "Plant Safety Coord": {
             "Mgr": "Francisco Mora  "
-         }
+         },
+         "lat": -37.0333,
+         "lng":  -72.4
       },
       {
          "Country": "Chile",
@@ -249,7 +251,9 @@ $(document).ready(()=>{
          "Division Leader": "Benoit Martine",
          "Plant Safety Coord": {
             "Mgr": "Alvaro Inostroza "
-         }
+         },
+         "lat": -36.594915,
+         "lng":  -72.067418
       },
       {
          "Country": "Chile",
@@ -264,7 +268,9 @@ $(document).ready(()=>{
          "Division Leader": "Benoit Martine",
          "Plant Safety Coord": {
             "Mgr": "Yussef Srain"
-         }
+         },
+         "lat": -33.279345,
+         "lng":  -70.887937
       },
       {
          "Country": "China",
@@ -279,7 +285,9 @@ $(document).ready(()=>{
          "Division Leader": "N/A",
          "Plant Safety Coord": {
             "Mgr": "N/A"
-         }
+         },
+         "lat": 31.349951,
+         "lng":  121.582691
       },
       {
          "Country": "Czech",
@@ -294,7 +302,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Marta Svobodova"
-         }
+         },
+         "lat": 49.820468,
+         "lng":  14.354724
       },
       {
          "Country": "Czech",
@@ -309,7 +319,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Marta Svobodova"
-         }
+         },
+         "lat": 49.0667,
+         "lng":  17.4833
       },
       {
          "Country": "Ireland",
@@ -324,7 +336,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Aisling Cox"
-         }
+         },
+         "lat": 53.942,
+         "lng":  -8.087
       },
       {
          "Country": "Malaysia",
@@ -339,7 +353,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": ""
-         }
+         },
+         "lat": 3.12381,
+         "lng":  113.024019
       },
       {
          "Country": "Mexico",
@@ -354,7 +370,9 @@ $(document).ready(()=>{
          "Division Leader": "Ben White",
          "Plant Safety Coord": {
             "Mgr": "Arturo Castillo"
-         }
+         },
+         "lat": 25.959658,
+         "lng":  -100.173778
       },
       {
          "Country": "Mexico",
@@ -369,7 +387,9 @@ $(document).ready(()=>{
          "Division Leader": "Ben White",
          "Plant Safety Coord": {
             "Mgr": "Adela Avila"
-         }
+         },
+         "lat": 32.476725,
+         "lng":  116.989979
       },
       {
          "Country": "UK",
@@ -384,7 +404,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Diane Smith"
-         }
+         },
+         "lat": 52.467735,
+         "lng": -2.130834
       },
       {
          "Country": "UK",
@@ -399,7 +421,9 @@ $(document).ready(()=>{
          "Division Leader": "Paul Conway",
          "Plant Safety Coord": {
             "Mgr": "Shantay Baugh"
-         }
+         },
+         "lat": 53.128472,
+         "lng": -1.301703
       },
       {
          "Country": "UK",
@@ -414,7 +438,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Victoria Hill"
-         }
+         },
+         "lat": 53.58801,
+         "lng": -1.542581
       },
       {
          "Country": "UK",
@@ -429,7 +455,9 @@ $(document).ready(()=>{
          "Division Leader": "Cormac Kearns",
          "Plant Safety Coord": {
             "Mgr": "Peter Skinner"
-         }
+         },
+         "lat": 53.008117,
+         "lng":  -2.178499
       },
       {
          "Country": "USA",
@@ -1282,7 +1310,7 @@ $(document).ready(()=>{
    function placeAllMarkers(){
       //creates marks for USA locations with popups
       for(var i =0; i<locations.length; i++){
-         if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada' ){
+         if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada'){
               var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
               var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
                      .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
