@@ -410,8 +410,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Adela Avila"
          },
-         "lat":32.476725,
-         "lng":116.989979,
+         "lat":32.455966,
+         "lng":-116.977006,
          "Tier":1
       },
       {
