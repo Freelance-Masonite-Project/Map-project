@@ -248,6 +248,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Francisco Mora  "
          },
+         "lat":-37.0333,
+         "lng":-72.4,
          "Tier":1
       },
       {
@@ -264,6 +266,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Alvaro Inostroza "
          },
+         "lat":-36.594915,
+         "lng":-72.067418,
          "Tier":1
       },
       {
@@ -280,6 +284,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Yussef Srain"
          },
+         "lat":-33.279345,
+         "lng":-70.887937,
          "Tier":1
       },
       {
@@ -296,6 +302,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"N/A"
          },
+         "lat":31.349951,
+         "lng":121.582691,
          "Tier":1
       },
       {
@@ -312,6 +320,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Marta Svobodova"
          },
+         "lat":49.820468,
+         "lng":14.354724,
          "Tier":1
       },
       {
@@ -328,6 +338,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Marta Svobodova"
          },
+         "lat":49.0667,
+         "lng":17.4833,
          "Tier":1
       },
       {
@@ -344,6 +356,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Aisling Cox"
          },
+         "lat":53.942,
+         "lng":-8.087,
          "Tier":1
       },
       {
@@ -360,6 +374,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":""
          },
+         "lat":3.12381,
+         "lng":113.024019,
          "Tier":1
       },
       {
@@ -376,6 +392,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Arturo Castillo"
          },
+         "lat":25.959658,
+         "lng":-100.173778,
          "Tier":1
       },
       {
@@ -392,6 +410,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Adela Avila"
          },
+         "lat":32.476725,
+         "lng":116.989979,
          "Tier":1
       },
       {
@@ -408,6 +428,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Diane Smith"
          },
+         "lat":52.467735,
+         "lng":-2.130834,
          "Tier":1
       },
       {
@@ -424,6 +446,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Shantay Baugh"
          },
+         "lat":53.128472,
+         "lng":-1.301703,
          "Tier":1
       },
       {
@@ -440,6 +464,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Victoria Hill"
          },
+         "lat":53.58801,
+         "lng":-1.542581,
          "Tier":1
       },
       {
@@ -456,6 +482,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Peter Skinner"
          },
+         "lat":53.008117,
+         "lng":-2.178499,
          "Tier":1
       },
       {
@@ -526,8 +554,8 @@ $(document).ready(()=>{
          "Plant Safety Coord":{
             "Mgr":"Rick Leo "
          },
-         "lat":29.372162,
-         "lng":-94.95177,
+         "lat":40.59987,
+         "lng":-74.7163,
          "Tier":1
       },
       {
@@ -744,24 +772,6 @@ $(document).ready(()=>{
          },
          "lat":33.9889,
          "lng":-84.525276,
-         "Tier":1
-      },
-      {
-         "Country":"USA",
-         "Name":"Marshfield",
-         "Notes":"ARCH",
-         "Street":"1401 E. 4th St.",
-         "City":"Marshfield",
-         "State":"WI",
-         "Zip":"54449",
-         "Telephone #":"800-869-3667",
-         "Plant Manager":"Bruce Price",
-         "Division Leader":"Marc Kincade",
-         "Plant Safety Coord":{
-            "Mgr":"Bruce Price"
-         },
-         "lat":44.659992,
-         "lng":-90.157646,
          "Tier":1
       },
       {
