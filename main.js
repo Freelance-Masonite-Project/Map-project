@@ -1313,22 +1313,6 @@ $(document).ready(()=>{
          "lat":30.635944,
          "lng":-81.56318,
          "Tier":1
-      },
-      {
-         "Country":"",
-         "Name":"",
-         "Notes":"",
-         "Street":"",
-         "City":"",
-         "State":"",
-         "Zip":"",
-         "Telephone #":"",
-         "Plant Manager":"*Interim",
-         "Division Leader":"",
-         "Plant Safety Coord":{
-            "Mgr":""
-         },
-         "Tier":1
       }
    ];
 
@@ -1352,9 +1336,9 @@ $(document).ready(()=>{
       for(var i = 0; i<locations.length; i++){
          var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
          if(address == target_address){
-            console.log(locations[i]);
             $('#address').html(address);
             $('#Catagories').html(locations[i]["Notes"].toString());
+            $('.tier').html(locations[i].Tier);
          }
       }
    }
@@ -1384,15 +1368,11 @@ $(document).ready(()=>{
    function placeAllMarkers(){
       //creates marks for USA locations with popups
       for(var i =0; i<locations.length; i++){
-         if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada'){
-              var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
-              var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
-                     .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
-              active_markers.push(marker);
-              marker.on('click', displayMarkerData);
-         }else{
-             //console.log(locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country']);
-         }
+            var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+            var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
+                  .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
+            active_markers.push(marker);
+            marker.on('click', displayMarkerData);
      }
    }
 
@@ -1417,13 +1397,11 @@ $(document).ready(()=>{
             loc_cats.sort();
             target_cats.sort();
             if(isEqual(target_cats, loc_cats)){
-               if(locations[i]['Country'] == 'USA' || locations[i]['Country'] == 'Canada' ){
-                  var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
-                  var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
-                        .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
-                  active_markers.push(marker);
-                  marker.on('click', displayMarkerData);
-               }
+               var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+               var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
+                     .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
+               active_markers.push(marker);
+               marker.on('click', displayMarkerData);
             }
          }
       }
