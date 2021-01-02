@@ -1344,7 +1344,8 @@ $(document).ready(()=>{
          if(address == target_address){
             console.log(locations[i]);
             $('#address').html(address);
-            $('#Catagories').html(locations[i]["Notes"].toString());
+            $('#Catagories').html(locations[i].Notes.toString());
+            $(".tier").html(locations[i].Tier)
          }
       }
    }
