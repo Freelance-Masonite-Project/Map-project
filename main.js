@@ -291,9 +291,9 @@ $(document).ready(()=>{
       {
          "Country":"China",
          "Name":"Shangai",
-         "Notes":"N/A",
-         "Street":"No.2 Taizhong Rd, Rm 315  ",
-         "City":"Waigaoqiao",
+         "Notes":"",
+         "Street":"No. 2 Taizhong (S)Road, Rm 315  ",
+         "City":"Waigaoqiao Free Trade Zone",
          "State":"Shanghai",
          "Zip":"200131",
          "Telephone #":"86-21-50481343",
@@ -346,9 +346,9 @@ $(document).ready(()=>{
          "Country":"Ireland",
          "Name":"Carrick-on-Shannon",
          "Notes":"COMP, Europe",
-         "Street":"Derryoughter",
+         "Street":"Derryoughter, Drumsna",
          "City":"Carrick-on-Shannon",
-         "State":"Leitrim",
+         "State":"Co. Leitrim",
          "Zip":"N41 CC94",
          "Telephone #":"353-71-96-59563",
          "Plant Manager":"Kieran Rooney",
@@ -400,7 +400,7 @@ $(document).ready(()=>{
          "Country":"Mexico",
          "Name":"Tijuana",
          "Notes":"RES, Int. W",
-         "Street":"Calle Acapulco #9851",
+         "Street":"Calle Acapulco #9851, Parque Industrial Pacifico IV",
          "City":"Tijuana",
          "State":"Baja California",
          "Zip":"22643",
@@ -418,7 +418,7 @@ $(document).ready(()=>{
          "Country":"UK",
          "Name":"Fibercill/Dudley",
          "Notes":"UK",
-         "Street":"The Moorings, Brierley Hill",
+         "Street":"The Moorings, Hurst Business Park, Brierley Hill",
          "City":"Dudley",
          "State":"West Midlands",
          "Zip":"DY5 1UF",
@@ -454,8 +454,8 @@ $(document).ready(()=>{
          "Country":"UK",
          "Name":"Premdor",
          "Notes":"UK",
-         "Street":"Birthwaite Business Pk. Huddersfield Rd.",
-         "City":"",
+         "Street":"Birthwaite Business Park Huddersfield Rd.",
+         "City":"Darton",
          "State":"Barnsley",
          "Zip":"S75 5JS",
          "Telephone #":"44 7741384145",
@@ -1409,14 +1409,10 @@ $(document).ready(()=>{
 
    //Initiates map
    var map = L.map('map', {
-       center: [38.7139, -97.4146],
-       zoom: 4,
-       // maxZoom: 4.6,
-       minZoom: 3,
-       // zoomControl: false,
-       // dragging: false,
-       // doubleClickZoom: false,
-       // zoomSnap: .1
+       center: [38.7139, 0.4146],
+       zoom: 1.6,
+       minZoom: 1.6,
+       zoomSnap: .1
    });
 
    const active_markers = [];
