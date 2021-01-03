@@ -1363,6 +1363,7 @@ $(document).ready(()=>{
       {
          map.removeLayer(active_markers[i]);
       }
+      active_markers = [];
    }
 
    function placeAllMarkers(){
@@ -1407,6 +1408,38 @@ $(document).ready(()=>{
       }
    }
 
+   //searchtiers
+   function searchTier(){
+      var tiers = [];
+      var data = $('.activeT');
+      for(var i=0; i<data.length; i++)
+      {
+         tiers.push(data[i].id);
+      }
+
+      clearMap();
+
+      for(var i=0; i<locations.length;i++)
+      {
+         var correct_loc = false;
+         for(var j=0; j<tiers.length; j++)
+         {
+            if(locations[i].Tier == tiers[j])
+            {
+               correct_loc = true;
+            }
+         }
+         if(correct_loc){
+            var address = locations[i]['Street'] + ' ' + locations[i]['City'] +' ' + locations[i]['State'] + ', ' + locations[i]['Country'];
+            var marker = L.marker([locations[i].lat, locations[i].lng], {riseOnHover:true,}).addTo(map)
+                  .bindPopup(`Location: ${locations[i].City}<br>Address: <a>${address}</a>`);
+            active_markers.push(marker);
+            marker.on('click', displayMarkerData);
+         }
+      }
+      if(tiers.length == 0){placeAllMarkers();}
+   }
+
    //Initiates map
    var map = L.map('map', {
        center: [38.7139, 0.4146],
@@ -1415,7 +1448,7 @@ $(document).ready(()=>{
        zoomSnap: .1
    });
 
-   const active_markers = [];
+   var active_markers = [];
    
    placeAllMarkers();
    
@@ -1425,7 +1458,7 @@ $(document).ready(()=>{
        }).addTo(map);
 
    
-   //catagory btn select
+   //catagory btn filter listenr
    $('.cat-btn').on('click', function(){
       if($(this).hasClass('active')){
          $(this).removeClass('active');
@@ -1434,5 +1467,14 @@ $(document).ready(()=>{
       }
       searchLocations();
    });
-//d
+
+   //Tier btn filter listener
+   $('.tier-btn').on('click', function(){
+      if($(this).hasClass('activeT')){
+         $(this).removeClass('activeT')
+      }else{
+         $(this).addClass('activeT')
+      }
+      searchTier();
+   });
 });
