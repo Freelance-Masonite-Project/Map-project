@@ -291,7 +291,7 @@ $(document).ready(()=>{
       {
          "Country":"China",
          "Name":"Shangai",
-         "Notes":"",
+         "Notes":"N/A",
          "Street":"No. 2 Taizhong (S)Road, Rm 315  ",
          "City":"Waigaoqiao Free Trade Zone",
          "State":"Shanghai",
