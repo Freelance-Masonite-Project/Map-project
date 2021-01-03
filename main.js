@@ -1473,7 +1473,8 @@ $(document).ready(()=>{
       if($(this).hasClass('activeT')){
          $(this).removeClass('activeT')
       }else{
-         $(this).addClass('activeT')
+         $('.activeT').removeClass('activeT');
+         $(this).addClass('activeT');
       }
       searchTier();
    });
