@@ -28,6 +28,7 @@ body{
     left: 40px;
 }
 
+
 /* cont titles */
 h2{
     margin-left: 4%;
@@ -74,7 +75,7 @@ h2{
 }
 
 .details-cont{
-    top: 55%;
+    top: 60%;
 }
 
 /* filter styling*/
@@ -83,7 +84,7 @@ h2{
     margin: auto;
     background: rgb(237, 237, 237);
     width: 80%;
-    height: 60%;
+    height: 45%;
     padding: 5px;
 }
 .btn-ttl{
@@ -93,12 +94,12 @@ h2{
     color: rgb(96, 124, 50);
     margin-left: 10px;
     margin-right:10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid black;
 }
 
 .btn-cont{
-    margin: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -111,8 +112,8 @@ h2{
     border: 1px solid black;
     border-radius: 5px;
     padding: 2px;
-    margin: 7.5px;
-    width: 75px;
+    margin: 7px;
+    width: 65px;
     height: 30px;
     transition: background .5s;
     font-size: 10px;
@@ -144,7 +145,7 @@ h2{
 }
 .data-title{
     text-align: center;
-    margin: 5px;
+    margin: 2.5px;
     font-size: 24px;
     color: rgb(96, 124, 50);
 }
