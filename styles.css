@@ -197,20 +197,31 @@ h4{
 }
 
 @media all and (max-width: 878px){
-    .details-cont, .filter-cont{display: none;}
 
+    /*navbar*/
+    .logo{
+        width: 20vh;
+        height: 10vh;
+        top: -2vh;
+    }
+
+    .navbar{
+        height: 6vh;
+    }
+
+    /* Positioning for divs */
     .map-cont{
         width: 100vw;
         height: 45vh;
         padding: 0;
-        top: 13vw;
+        top: 8.5vh;
         border-right: none;
     }
 
     h2{
         margin: 0;
         margin-left: 4%;
-        font-size: 15px;
+        font-size: 18px;
         padding-bottom: 5px;
         border-bottom: none;
     }
@@ -221,15 +232,47 @@ h4{
         top: 25px;
     }
 
-    /*navbar*/
-    .logo{
-        width: 30vw;
-        height: 15vw;
-        top: -2vw;
+    h2{display: none;}
+
+    .filter-cont, .details-cont{position: static;}
+
+    .filter-inputs{
+        position: absolute;
+        top: 56vh; left: 4%;
+        width: 40vw;
+        height: 38vh; 
+        overflow: hidden;
     }
 
-    .navbar{
-        height: 10vw;
+    .cat-btn{
+        width: 30%;
+        height: 4.5vh;
+        font-size: 1.5vw;
+        margin: 2%;
     }
 
+    .tiers{
+        position: absolute;
+        top: 54vh; left: 50vw;
+        height: 12.5vh !important;
+        margin: 0;
+    }
+
+    .tier-btn{
+        font-size: 1.5vw;
+        width: 8vw;
+        height: 4vh;
+        margin: 2%;
+    }
+
+    .location-input{
+        position: absolute;
+        margin: 0;
+        height: 22vh; width: 40vw;
+        left: 50vw; top: 72vh;
+    }
+
+    h4{font-size: 2.5vw;}
+
+    .data-holder{font-size: 1.5vw;}
 }
